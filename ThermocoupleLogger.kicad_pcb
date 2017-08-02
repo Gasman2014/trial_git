@@ -2,10 +2,10 @@
 
   (general
     (thickness 1.6)
-    (drawings 22)
+    (drawings 21)
     (tracks 494)
     (zones 0)
-    (modules 80)
+    (modules 79)
     (nets 83)
   )
 
@@ -276,21 +276,6 @@
     (add_net GND)
     (add_net "Net-(BT1-Pad1)")
     (add_net "Net-(BT2-Pad1)")
-  )
-
-  (module Mounting_Holes:MountingHole_5.5mm (layer F.Cu) (tedit 56D1B4CB) (tstamp 598A07F7)
-    (at 100.076 127.762)
-    (descr "Mounting Hole 5.5mm, no annular")
-    (tags "mounting hole 5.5mm no annular")
-    (fp_text reference REF** (at 0 -6.5) (layer F.SilkS)
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_text value MountingHole_5.5mm (at 0 6.5) (layer F.Fab)
-      (effects (font (size 1 1) (thickness 0.15)))
-    )
-    (fp_circle (center 0 0) (end 5.5 0) (layer Cmts.User) (width 0.15))
-    (fp_circle (center 0 0) (end 5.75 0) (layer F.CrtYd) (width 0.05))
-    (pad 1 np_thru_hole circle (at 0 0) (size 5.5 5.5) (drill 5.5) (layers *.Cu *.Mask))
   )
 
   (module Mounting_Holes:MountingHole_3.2mm_M3 (layer F.Cu) (tedit 59770A6C) (tstamp 59B7555D)
@@ -4239,9 +4224,6 @@
     )
   )
 
-  (gr_text TEST (at 167.513 76.073) (layer F.Cu)
-    (effects (font (size 1.5 1.5) (thickness 0.3)))
-  )
   (gr_text "©2017, JP Enterprises" (at 171.704 125.984 90) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.25) italic))
   )
