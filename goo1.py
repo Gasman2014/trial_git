@@ -15,7 +15,6 @@ git = subprocess.run(['/usr/local/bin/git','log',
                  ], stdout = subprocess.PIPE)
 checkouts = (git.stdout.decode('utf-8'))
 checkouts = checkouts.splitlines()
-print (type(checkouts))
 
 
 root = Tk()
@@ -32,7 +31,7 @@ my_frame.pack(side=RIGHT)
 
 #add my_listbox widget to my_frame_2
 Label(my_frame, text='Below is an example of my_listbox widget:').pack()
-my_listbox = Listbox(my_frame, height=4)
+my_listbox = Listbox(my_frame, height=20)
 for line in checkouts:
     my_listbox.insert(END, line)
 my_listbox.pack()
