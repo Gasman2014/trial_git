@@ -1,40 +1,53 @@
-"""
-Code illustration: 01.03
-A demonstration of all core tkinter widgets
-Tkinter GUI Application Development Blueprints
+#!/usr/local/bin/python3
+""".
+Test of linting
+just checking it is working
 """
 
-from tkinter import *
-import sys
-import os
 import subprocess
+from tkinter import *
+from tkinter import filedialog, ttk
 
-
-git = subprocess.run(['/usr/local/bin/git','log',
-                 '--pretty=format:"%h : %s"'
-                 ], stdout = subprocess.PIPE)
-checkouts = (git.stdout.decode('utf-8'))
-checkouts = checkouts.splitlines()
+git = subprocess.run(['/usr/local/bin/git', 'log',
+                      '--pretty=format:"%h, %s"'], stdout=subprocess.PIPE)
+checkouts_left = (git.stdout.decode('utf-8').splitlines())
+checkouts_right = checkouts_left[:]
 
 
 root = Tk()
-root.title('I am a Top Level Widget, parent to other widgets')
-#create a frame widget for placing menu
-my_menu_bar = Frame(root, relief = 'raised', bd=2)
-my_menu_bar.pack(fill = X)
-
-#create another frame(my_frame_2) to hold a list box, Spinbox Widget,Scale Widget, :
-my_frame = Frame(root, bd=2, relief=GROOVE)
-my_frame.pack(side=RIGHT)
 
 
+root.title('Main Window')
 
-#add my_listbox widget to my_frame_2
-Label(my_frame, text='Below is an example of my_listbox widget:').pack()
-my_listbox = Listbox(my_frame, height=20)
-for line in checkouts:
-    my_listbox.insert(END, line)
-my_listbox.pack()
 
+listLeft = Listbox(root, height=10)
+listLeft.grid(column=0, row=0, sticky=(N, E, W), pady=10, padx=(10, 0))
+scrollLeft = ttk.Scrollbar(root, orient=VERTICAL, command=listLeft.yview)
+scrollLeft.grid(column=1, row=0, sticky=(N, E, W), pady=10, padx=(0, 10))
+listLeft['yscrollcommand'] = scrollLeft.set
+
+
+listRight = Listbox(root, height=10)
+listRight.grid(column=2, row=0, sticky=(N, E, W), pady=10)
+scrollRight = ttk.Scrollbar(root, orient=VERTICAL, command=listRight.yview)
+scrollRight.grid(column=3, row=0, sticky=(N, E, W), pady=10, padx=(0, 10))
+listRight['yscrollcommand'] = scrollRight.set
+
+root.grid_columnconfigure(0, weight=1)
+root.grid_columnconfigure(2, weight=1)
+root.grid_rowconfigure(0, weight=1)
+
+
+for line in checkouts_left:
+    listLeft.insert(END, line[1:-1])
+
+for line in checkouts_right:
+    listRight.insert(END, line[1:-1])
+
+for i in range(0, len(checkouts_left), 2):
+    listLeft.itemconfigure(i, background='#f0f0f0')
+
+for i in range(0, len(checkouts_right), 2):
+    listRight.itemconfigure(i, background='#f0f0f0')
 
 root.mainloop()
