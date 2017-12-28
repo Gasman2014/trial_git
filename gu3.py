@@ -1,67 +1,71 @@
 from tkinter import *
 
-master = Tk()
-master.title("Select Groups")
 
-rows = 10
-columns = 10
+class ListBoxChoice(object):
+    def __init__(self, master=None, title=None, message=None, list=[]):
+        self.master = master
+        self.value = None
+        self.list = list[:]
 
-boxes = []
-boxVars = []
+        self.modalPane = Toplevel(self.master)
 
-# Create all IntVars, set to 0
+        self.modalPane.transient(self.master)
+        self.modalPane.grab_set()
 
-for i in range(rows):
-    boxVars.append([])
-    for j in range(columns):
-        boxVars[i].append(IntVar())
-        boxVars[i][j].set(0)
+        self.modalPane.bind("<Return>", self._choose)
+        self.modalPane.bind("<Escape>", self._cancel)
+
+        if title:
+            self.modalPane.title(title)
+
+        if message:
+            Label(self.modalPane, text=message).pack(padx=5, pady=5)
+
+        listFrame = Frame(self.modalPane)
+        listFrame.pack(side=TOP, padx=5, pady=5)
+
+        scrollBar = Scrollbar(listFrame)
+        scrollBar.pack(side=RIGHT, fill=Y)
+        self.listBox = Listbox(listFrame, selectmode=SINGLE)
+        self.listBox.pack(side=LEFT, fill=Y)
+        scrollBar.config(command=self.listBox.yview)
+        self.listBox.config(yscrollcommand=scrollBar.set)
+        self.list.sort()
+        for item in self.list:
+            self.listBox.insert(END, item)
+
+        buttonFrame = Frame(self.modalPane)
+        buttonFrame.pack(side=BOTTOM)
+
+        chooseButton = Button(buttonFrame, text="Choose", command=self._choose)
+        chooseButton.pack()
+
+        cancelButton = Button(buttonFrame, text="Cancel", command=self._cancel)
+        cancelButton.pack(side=RIGHT)
+
+    def _choose(self, event=None):
+        try:
+            firstIndex = self.listBox.curselection()[0]
+            self.value = self.list[int(firstIndex)]
+        except IndexError:
+            self.value = None
+        self.modalPane.destroy()
+
+    def _cancel(self, event=None):
+        self.modalPane.destroy()
+
+    def returnValue(self):
+        self.master.wait_window(self.modalPane)
+        return self.value
 
 
-def checkRow(i):
-    global boxVars, boxes
-    row = boxVars[i]
-    deselected = []
+if __name__ == '__main__':
+    import random
+    root = Tk()
 
-    # Loop through row that was changed, check which items were not selected
-    # (so that we know which indeces to disable in the event that 2 have been selected)
-
-    for j in range(len(row)):
-        if row[j].get() == 0:
-            deselected.append(j)
-
-    # Check if enough buttons have been selected. If so, disable the deselected indeces,
-    # Otherwise set all of them to active (in case we have previously disabled them).
-
-    if len(deselected) == (len(row) - 2):
-        for j in deselected:
-            boxes[i][j].config(state=DISABLED)
-    else:
-        for item in boxes[i]:
-            item.config(state=NORMAL)
-
-
-def getSelected():
-    selected = {}
-    for i in range(len(boxVars)):
-        temp = []
-        for j in range(len(boxVars[i])):
-            if boxVars[i][j].get() == 1:
-                temp.append(j + 1)
-        if len(temp) > 1:
-            selected[i + 1] = temp
-    print selected
-
-
-for x in range(rows):
-    boxes.append([])
-    for y in range(columns):
-        Label(master, text="Group %s" % (y + 1)).grid(row=0, column=y + 1)
-        Label(master, text="Test %s" % (x + 1)).grid(row=x + 1, column=0)
-        boxes[x].append(Checkbutton(master, variable=boxVars[x]
-                                    [y], command=lambda x=x: checkRow(x)))
-        boxes[x][y].grid(row=x + 1, column=y + 1)
-
-b = Button(master, text="Get", command=getSelected, width=10)
-b.grid(row=12, column=11)
-mainloop()
+    returnValue = True
+    list = [random.randint(1, 100) for x in range(50)]
+    while returnValue:
+        returnValue = ListBoxChoice(root, "Number Picking",
+                                    "Pick one of these crazy random numbers", list).returnValue()
+        print returnValue

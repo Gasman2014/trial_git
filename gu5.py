@@ -1,19 +1,20 @@
-#!/usr/local/bin/python3
+# !/usr/local/bin/python3
 
 import subprocess
 import tkinter as tk
 from tkinter import *
 from tkinter import filedialog, ttk
 
-global commitLeft, commitRight
-commitLeft = commitRight = ()
+global commitTop, commitBottom
+commitTop = commitBottom = ()
 
 git = subprocess.run(['/usr/local/bin/git', 'log',
                       '--pretty=format:"%h \t%s"'], stdout=subprocess.PIPE)
-checkouts_left = (git.stdout.decode('utf-8').splitlines())
-checkouts_right = checkouts_left[:]
 
-print(checkouts_left)
+checkouts_top = (git.stdout.decode('utf-8').splitlines())
+checkouts_bottom = checkouts_top[:]
+
+print(checkouts_top)
 
 
 def runProgram(*argv):
@@ -30,12 +31,12 @@ def runProgram(*argv):
         if buttons[val].get() == 0:
             print(val)
     print()
-    print("Commit LEFT : ")
-    print(commitLeft.get())
+    print("Commit TOP : ")
+    print(commitTop.get())
 
     print()
-    print("Commit RIGHT : ")
-    print(commitRight.get())
+    print("Commit Bottom : ")
+    print(commitBottom.get())
 
 
 def CurSelect(event):
@@ -46,13 +47,13 @@ def CurSelect(event):
     print(source, picked)
 
     if source == 3:
-        commitLeft = picked
-        print("CommitL = ", commitLeft)
+        commitTop = picked
+        print("CommitTop = ", commitTop)
 
     elif source == 4:
         print("HERE")
-        commitRight = picked
-        print("CommitR = ", commitRight)
+        commitBottom = picked
+        print("CommitBottom = ", commitBottom)
 
 
 def OnClick(event, obj):
@@ -74,19 +75,19 @@ frame4 = tk.LabelFrame(root, text="Commit 2", width=400,
 frame5 = tk.LabelFrame(root, text="Resolution (dpi)", width=600,
                        height=50, bd=0, background='#ececec')
 
-frame1.grid(row=0, column=0, columnspan=3, padx=5, sticky='N E W S')
-frame2.grid(row=1, column=0, padx=5, sticky='N E W S')
+frame1.grid(row=0, column=0, columnspan=2, padx=5, sticky='N E W S')
+frame2.grid(row=1, column=0, rowspan=2, padx=5, sticky='N E W S')
 frame3.grid(row=1, column=1, padx=5, sticky='N E W S')
-frame4.grid(row=1, column=2, padx=5, sticky='N E W S')
-frame5.grid(row=2, column=0, columnspan=3, padx=5, sticky='N E W S')
+frame4.grid(row=2, column=1, padx=5, sticky='N E W S')
+frame5.grid(row=3, column=0, columnspan=2, padx=5, sticky='N E W S')
 
 root.grid_columnconfigure(0, weight=1)
-root.grid_columnconfigure(1, weight=4)
-root.grid_columnconfigure(2, weight=4)
+root.grid_columnconfigure(1, weight=10)
 
 root.grid_rowconfigure(0, weight=1)
-root.grid_rowconfigure(1, weight=2)
-root.grid_rowconfigure(2, weight=1)
+root.grid_rowconfigure(1, weight=10)
+root.grid_rowconfigure(2, weight=10)
+root.grid_rowconfigure(3, weight=1)
 
 buttons = {'Top layer': '1',
            'Bottom layer': '1',
@@ -118,22 +119,22 @@ for b in buttons:
     buttons[b].set(1)
     l = ttk.Checkbutton(frame2, text=b, variable=buttons[b], onvalue=1, offvalue=0).pack(anchor='w')
 
-commitLeft = Variable()
-listLeft = Listbox(frame3, bd=0, selectmode=SINGLE, exportselection=False)
-listLeft.grid(column=0, row=0, sticky=(N, E, W))
-scrollLeft = ttk.Scrollbar(frame3, orient=VERTICAL, command=listLeft.yview)
-scrollLeft.grid(column=1, row=0, sticky=(N, E, W))
-listLeft['yscrollcommand'] = scrollLeft.set
-# listLeft.bind('<<ListboxSelect>>', lambda event, obj=listLeft: OnClick(CurSelect, obj))
-listLeft.bind('<<ListboxSelect>>', CurSelect)
+commitTop = Variable()
+listTop = Listbox(frame3, bd=0, selectmode=SINGLE, exportselection=False)
+listTop.grid(column=0, row=0, sticky=(N, E, W))
+scrollTop = ttk.Scrollbar(frame3, orient=VERTICAL, command=listTop.yview)
+scrollTop.grid(column=1, row=0, sticky=(N, E, W))
+listTop['yscrollcommand'] = scrollTop.set
+# listTop.bind('<<ListboxSelect>>', lambda event, obj=listTop: OnClick(CurSelect, obj))
+listTop.bind('<<ListboxSelect>>', CurSelect)
 
-commitRight = Variable()
-listRight = Listbox(frame4, bd=0, selectmode=SINGLE, exportselection=False)
-listRight.grid(column=0, row=0, sticky=(N, E, W))
-scrollRight = ttk.Scrollbar(frame4, orient=VERTICAL, command=listRight.yview)
-scrollRight.grid(column=1, row=0, sticky=(N, E, W))
-listRight['yscrollcommand'] = scrollRight.set
-listRight.bind('<<ListboxSelect>>', CurSelect)
+commitBottom = Variable()
+listBottom = Listbox(frame4, bd=0, selectmode=SINGLE, exportselection=False)
+listBottom.grid(column=0, row=0, sticky=(N, E, W))
+scrollBottom = ttk.Scrollbar(frame4, orient=VERTICAL, command=listBottom.yview)
+scrollBottom.grid(column=1, row=0, sticky=(N, E, W))
+listBottom['yscrollcommand'] = scrollBottom.set
+listBottom.bind('<<ListboxSelect>>', CurSelect)
 
 frame3.grid_columnconfigure(0, weight=1)
 frame3.grid_columnconfigure(1, weight=0)
@@ -174,17 +175,17 @@ frame5.grid_columnconfigure(6, weight=0)
 frame5.grid_columnconfigure(7, weight=1)
 frame5.grid_rowconfigure(0, weight=1)
 
-for line in checkouts_left:
-    listLeft.insert(END, line[1:-1])
+for line in checkouts_top:
+    listTop.insert(END, line[1:-1])
 
-for i in range(1, len(checkouts_left) - 1, 2):
-    listLeft.itemconfigure(i, background='#ececec')
+for i in range(1, len(checkouts_top) - 1, 2):
+    listTop.itemconfigure(i, background='#ececec')
 
-for line in checkouts_right:
-    listRight.insert(END, line[1:-1])
+for line in checkouts_bottom:
+    listBottom.insert(END, line[1:-1])
 
-for i in range(1, len(checkouts_right) - 1, 2):
-    listRight.itemconfigure(i, background='#ececec')
+for i in range(1, len(checkouts_bottom) - 1, 2):
+    listBottom.itemconfigure(i, background='#ececec')
 
 for child in root.winfo_children():
     child.grid_configure(padx=5, pady=5)
