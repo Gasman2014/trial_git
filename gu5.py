@@ -1,4 +1,4 @@
-# !/usr/local/bin/python3
+#!/usr/local/bin/python3
 
 import subprocess
 import tkinter as tk
@@ -178,13 +178,13 @@ frame5.grid_rowconfigure(0, weight=1)
 for line in checkouts_top:
     listTop.insert(END, line[1:-1])
 
-for i in range(1, len(checkouts_top) - 1, 2):
+for i in range(1, len(checkouts_top), 2):
     listTop.itemconfigure(i, background='#ececec')
 
 for line in checkouts_bottom:
     listBottom.insert(END, line[1:-1])
 
-for i in range(1, len(checkouts_bottom) - 1, 2):
+for i in range(1, len(checkouts_bottom), 2):
     listBottom.itemconfigure(i, background='#ececec')
 
 for child in root.winfo_children():
