@@ -173,11 +173,11 @@ F 3 "" H 1750 5600 50  0000 C CNN
 	1    1750 5600
 	1    0    0    -1  
 $EndComp
-Text GLabel 4250 3850 2    60   Output ~ 0
+Text GLabel 4250 3800 2    60   Output ~ 0
 SLCT0
-Text GLabel 4250 3950 2    60   Output ~ 0
+Text GLabel 4250 3900 2    60   Output ~ 0
 SLCT1
-Text GLabel 4250 4050 2    60   Output ~ 0
+Text GLabel 4250 4000 2    60   Output ~ 0
 SLCT2
 Text GLabel 6600 2650 0    60   Input ~ 0
 DB_MUX
@@ -256,7 +256,7 @@ F 3 "" H 7600 2850 50  0000 C CNN
 $EndComp
 Text GLabel 8900 2400 3    60   BiDi ~ 0
 SCK
-Text GLabel 4250 4150 2    60   BiDi ~ 0
+Text GLabel 4250 4250 2    60   BiDi ~ 0
 SDA
 Text GLabel 4250 4350 2    60   BiDi ~ 0
 SCL
@@ -300,7 +300,7 @@ F 3 "" H 3100 4100 50  0000 C CNN
 	1    3100 4100
 	1    0    0    -1  
 $EndComp
-Text GLabel 4250 3750 2    60   Output ~ 0
+Text GLabel 4250 3700 2    60   Output ~ 0
 B_LIGHT
 NoConn ~ 2100 3600
 $Comp
@@ -427,11 +427,11 @@ Wire Wire Line
 Wire Wire Line
 	4000 3500 4250 3500
 Wire Wire Line
-	4000 3850 4250 3850
+	4000 3800 4250 3800
 Wire Wire Line
-	4000 3950 4250 3950
+	4000 3900 4250 3900
 Wire Wire Line
-	4000 4050 4250 4050
+	4000 4000 4250 4000
 Wire Wire Line
 	7950 4000 8200 4000
 Wire Wire Line
@@ -533,7 +533,7 @@ Wire Wire Line
 Wire Wire Line
 	9800 1950 9800 1350
 Wire Wire Line
-	4250 3750 4000 3750
+	4250 3700 4000 3700
 Wire Wire Line
 	5500 4450 5800 4450
 Wire Wire Line
