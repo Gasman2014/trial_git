@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L LM7805-RESCUE-ThermocoupleLogger U14
+L ThermocoupleLogger-rescue:LM7805-RESCUE-ThermocoupleLogger- U14
 U 1 1 589C7DD7
 P 5600 3400
 F 0 "U14" H 5750 3204 50  0000 C CNN
@@ -25,7 +25,7 @@ F 3 "" H 5600 3400 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L NCP1117ST33T3G-RESCUE-ThermocoupleLogger U13
+L ThermocoupleLogger-rescue:NCP1117ST33T3G-RESCUE-ThermocoupleLogger- U13
 U 1 1 589C7DDE
 P 5600 2350
 F 0 "U13" H 5600 2600 50  0000 C CNN
@@ -36,7 +36,7 @@ F 3 "" H 5600 2350 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR01
+L ThermocoupleLogger-rescue:GND- #PWR01
 U 1 1 589C7DE5
 P 5600 2600
 F 0 "#PWR01" H 5600 2350 50  0001 C CNN
@@ -47,7 +47,7 @@ F 3 "" H 5600 2600 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR02
+L ThermocoupleLogger-rescue:GND- #PWR02
 U 1 1 589C7DEB
 P 5600 3850
 F 0 "#PWR02" H 5600 3600 50  0001 C CNN
@@ -90,7 +90,7 @@ Connection ~ 6400 3350
 Text GLabel 5050 3350 0    60   Input ~ 0
 9V0
 $Comp
-L GND #PWR03
+L ThermocoupleLogger-rescue:GND- #PWR03
 U 1 1 589D9B90
 P 9450 3100
 F 0 "#PWR03" H 9450 2850 50  0001 C CNN
@@ -101,7 +101,7 @@ F 3 "" H 9450 3100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG04
+L ThermocoupleLogger-rescue:PWR_FLAG- #FLG04
 U 1 1 589D9BA2
 P 9450 3000
 F 0 "#FLG04" H 9450 3095 50  0001 C CNN
@@ -124,7 +124,7 @@ Wire Notes Line
 Wire Wire Line
 	9450 3000 9450 3100
 $Comp
-L PWR_FLAG #FLG05
+L ThermocoupleLogger-rescue:PWR_FLAG- #FLG05
 U 1 1 589E3727
 P 9050 3000
 F 0 "#FLG05" H 9050 3095 50  0001 C CNN
@@ -137,7 +137,7 @@ $EndComp
 Text GLabel 9050 3000 3    60   BiDi ~ 0
 9V0
 $Comp
-L C_Small C1
+L ThermocoupleLogger-rescue:C_Small- C1
 U 1 1 589F9200
 P 6050 3550
 F 0 "C1" H 6060 3620 50  0000 L CNN
@@ -148,7 +148,7 @@ F 3 "" H 6050 3550 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CP_Small C2
+L ThermocoupleLogger-rescue:CP_Small- C2
 U 1 1 589F923F
 P 6300 3550
 F 0 "C2" H 6310 3620 50  0000 L CNN
@@ -159,7 +159,7 @@ F 3 "" H 6300 3550 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C_Small C?
+L ThermocoupleLogger-rescue:C_Small- C?
 U 1 1 5915D301
 P 6200 2450
 F 0 "C?" H 6292 2496 50  0000 L CNN
@@ -170,7 +170,7 @@ F 3 "" H 6200 2450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR?
+L ThermocoupleLogger-rescue:GND- #PWR?
 U 1 1 5915D5EA
 P 6200 2600
 F 0 "#PWR?" H 6200 2350 50  0001 C CNN

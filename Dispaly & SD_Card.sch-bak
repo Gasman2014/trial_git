@@ -20,7 +20,7 @@ NoConn ~ 8550 3750
 NoConn ~ 8550 3950
 NoConn ~ 8550 4050
 $Comp
-L I2C_20x4_DISPLAY U2
+L ThermocoupleLogger-rescue:I2C_20x4_DISPLAY- U2
 U 1 1 589D6D78
 P 3600 3750
 F 0 "U2" H 2650 4200 39  0000 C CNN
@@ -31,7 +31,7 @@ F 3 "" H 3600 3750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR07
+L ThermocoupleLogger-rescue:GND- #PWR07
 U 1 1 589D6D7F
 P 2900 4300
 F 0 "#PWR07" H 2900 4050 50  0001 C CNN
@@ -52,7 +52,7 @@ Text GLabel 6750 3850 0    60   Input ~ 0
 Text GLabel 3150 2300 2    60   Input ~ 0
 B_LIGHT
 $Comp
-L GND #PWR08
+L ThermocoupleLogger-rescue:GND- #PWR08
 U 1 1 589E9EFA
 P 2200 1700
 F 0 "#PWR08" H 2200 1450 50  0001 C CNN
@@ -75,7 +75,7 @@ Wire Wire Line
 Wire Wire Line
 	2200 5100 3550 5100
 $Comp
-L R_Small R4
+L ThermocoupleLogger-rescue:R_Small- R4
 U 1 1 589EBC96
 P 2800 2300
 F 0 "R4" V 2900 2300 50  0000 C CNN
@@ -87,7 +87,7 @@ F 3 "" H 2800 2300 50  0000 C CNN
 $EndComp
 Connection ~ 2750 5100
 $Comp
-L BD139 Q1
+L ThermocoupleLogger-rescue:BD139- Q1
 U 1 1 589EBCEC
 P 2300 2300
 F 0 "Q1" H 2500 2375 50  0000 L CNN
@@ -112,7 +112,7 @@ Wire Wire Line
 Wire Wire Line
 	2200 3500 2200 5100
 $Comp
-L SD_Card CON1
+L ThermocoupleLogger-rescue:SD_Card- CON1
 U 1 1 589D55E8
 P 7650 3850
 F 0 "CON1" H 7000 4400 50  0000 C CNN
@@ -127,7 +127,7 @@ Wire Wire Line
 Wire Wire Line
 	6300 3750 6300 5350
 $Comp
-L GND #PWR09
+L ThermocoupleLogger-rescue:GND- #PWR09
 U 1 1 589F89B1
 P 6300 5350
 F 0 "#PWR09" H 6300 5100 50  0001 C CNN
@@ -142,7 +142,7 @@ Wire Wire Line
 Wire Wire Line
 	5700 3550 5700 4450
 $Comp
-L R_Small R13
+L ThermocoupleLogger-rescue:R_Small- R13
 U 1 1 589F89F8
 P 5700 4550
 F 0 "R13" H 5730 4570 50  0000 L CNN
@@ -153,7 +153,7 @@ F 3 "" H 5700 4550 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R_Small R5
+L ThermocoupleLogger-rescue:R_Small- R5
 U 1 1 589F8A46
 P 5450 3550
 F 0 "R5" H 5480 3570 50  0000 L CNN
@@ -176,7 +176,7 @@ Need to check connections\n3.3V logic at SD card but Atmega at 5v - need to sort
 Wire Wire Line
 	5550 3950 6750 3950
 $Comp
-L R_Small R12
+L ThermocoupleLogger-rescue:R_Small- R12
 U 1 1 589F8D71
 P 5450 3950
 F 0 "R12" H 5480 3970 50  0000 L CNN
@@ -192,7 +192,7 @@ Wire Wire Line
 	5950 3950 5950 4450
 Connection ~ 5950 3950
 $Comp
-L R_Small R14
+L ThermocoupleLogger-rescue:R_Small- R14
 U 1 1 589F8E34
 P 5950 4550
 F 0 "R14" H 5980 4570 50  0000 L CNN

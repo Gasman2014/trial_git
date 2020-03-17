@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L GND #PWR010
+L ThermocoupleLogger-rescue:GND- #PWR010
 U 1 1 589D8979
 P 9000 5550
 F 0 "#PWR010" H 9000 5300 50  0001 C CNN
@@ -25,7 +25,7 @@ F 3 "" H 9000 5550 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Crystal Y1
+L ThermocoupleLogger-rescue:Crystal- Y1
 U 1 1 589D897F
 P 10150 4700
 F 0 "Y1" H 10150 4850 50  0000 C CNN
@@ -36,7 +36,7 @@ F 3 "" H 10150 4700 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Battery-RESCUE-ThermocoupleLogger BT1
+L ThermocoupleLogger-rescue:Battery-RESCUE-ThermocoupleLogger- BT1
 U 1 1 589D8986
 P 10150 5300
 F 0 "BT1" H 10250 5350 50  0000 L CNN
@@ -47,7 +47,7 @@ F 3 "" V 10150 5340 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR011
+L ThermocoupleLogger-rescue:GND- #PWR011
 U 1 1 589D898D
 P 10150 5500
 F 0 "#PWR011" H 10150 5250 50  0001 C CNN
@@ -58,7 +58,7 @@ F 3 "" H 10150 5500 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L DS1307+ U3
+L ThermocoupleLogger-rescue:DS1307+- U3
 U 1 1 589D8996
 P 9000 4850
 F 0 "U3" H 8550 5450 50  0000 C CNN
@@ -111,7 +111,7 @@ F 6 "-" H 7950 4350 60  0001 C CNN "Vendor"
 	1    0    0    -1  
 $EndComp
 $Comp
-L CONN_01X04 P1
+L ThermocoupleLogger-rescue:CONN_01X04- P1
 U 1 1 589D89DF
 P 4250 1550
 F 0 "P1" H 4250 1800 50  0000 C CNN
@@ -152,7 +152,7 @@ Text GLabel 10000 4000 2    60   Input ~ 0
 Text GLabel 7050 1350 0    60   Input ~ 0
 5V0
 $Comp
-L GND #PWR013
+L ThermocoupleLogger-rescue:GND- #PWR013
 U 1 1 589D8A4C
 P 7600 3400
 F 0 "#PWR013" H 7600 3150 50  0001 C CNN
@@ -222,7 +222,7 @@ F 3 "" H 2850 1600 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L SW_PUSH SW2
+L ThermocoupleLogger-rescue:SW_PUSH- SW2
 U 1 1 589E5414
 P 5200 4450
 F 0 "SW2" H 5350 4560 50  0000 C CNN
@@ -233,7 +233,7 @@ F 3 "" H 5200 4450 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR016
+L ThermocoupleLogger-rescue:GND- #PWR016
 U 1 1 589E548A
 P 5800 5600
 F 0 "#PWR016" H 5800 5350 50  0001 C CNN
@@ -244,7 +244,7 @@ F 3 "" H 5800 5600 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MAX31855EASA U4
+L ThermocoupleLogger-rescue:MAX31855EASA- U4
 U 1 1 589E58D9
 P 7600 2850
 F 0 "U4" H 7300 3200 50  0000 L CNN
@@ -279,7 +279,7 @@ CS
 Text GLabel 9800 2400 3    60   Output ~ 0
 MISO
 $Comp
-L Crystal Y2
+L ThermocoupleLogger-rescue:Crystal- Y2
 U 1 1 589E8900
 P 5200 3650
 F 0 "Y2" V 5200 3800 50  0000 C CNN
@@ -304,7 +304,7 @@ Text GLabel 4250 3750 2    60   Output ~ 0
 B_LIGHT
 NoConn ~ 2100 3600
 $Comp
-L 2N7002-RESCUE-ThermocoupleLogger Q4
+L ThermocoupleLogger-rescue:2N7002-RESCUE-ThermocoupleLogger- Q4
 U 1 1 589EE57F
 P 9500 2150
 AR Path="/589EE57F" Ref="Q4"  Part="1" 
@@ -317,7 +317,7 @@ F 3 "" H 9500 2150 50  0000 L CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L 2N7002-RESCUE-ThermocoupleLogger Q5
+L ThermocoupleLogger-rescue:2N7002-RESCUE-ThermocoupleLogger- Q5
 U 1 1 589EEB65
 P 10400 2150
 AR Path="/589EEB65" Ref="Q5"  Part="1" 
@@ -330,7 +330,7 @@ F 3 "" H 10400 2150 50  0000 L CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L 2N7002-RESCUE-ThermocoupleLogger Q3
+L ThermocoupleLogger-rescue:2N7002-RESCUE-ThermocoupleLogger- Q3
 U 1 1 589EEBB7
 P 8600 2150
 AR Path="/589EEBB7" Ref="Q3"  Part="1" 
@@ -343,7 +343,7 @@ F 3 "" H 8600 2150 50  0000 L CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L R R6
+L ThermocoupleLogger-rescue:R- R6
 U 1 1 589EEC30
 P 8250 2100
 F 0 "R6" V 8330 2100 50  0000 C CNN
@@ -354,7 +354,7 @@ F 3 "" H 8250 2100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R7
+L ThermocoupleLogger-rescue:R- R7
 U 1 1 589EECFE
 P 8900 2100
 F 0 "R7" V 8980 2100 50  0000 C CNN
@@ -365,7 +365,7 @@ F 3 "" H 8900 2100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R8
+L ThermocoupleLogger-rescue:R- R8
 U 1 1 589EED58
 P 9150 2100
 F 0 "R8" V 9230 2100 50  0000 C CNN
@@ -376,7 +376,7 @@ F 3 "" H 9150 2100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R9
+L ThermocoupleLogger-rescue:R- R9
 U 1 1 589EEDAC
 P 9800 2100
 F 0 "R9" V 9880 2100 50  0000 C CNN
@@ -387,7 +387,7 @@ F 3 "" H 9800 2100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R10
+L ThermocoupleLogger-rescue:R- R10
 U 1 1 589EEE06
 P 10050 2100
 F 0 "R10" V 10130 2100 50  0000 C CNN
@@ -398,7 +398,7 @@ F 3 "" H 10050 2100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R11
+L ThermocoupleLogger-rescue:R- R11
 U 1 1 589EEE5D
 P 10750 2100
 F 0 "R11" V 10830 2100 50  0000 C CNN
@@ -542,7 +542,7 @@ Wire Wire Line
 	5500 4800 5800 4800
 Connection ~ 5800 4800
 $Comp
-L SW_PUSH SW1
+L ThermocoupleLogger-rescue:SW_PUSH- SW1
 U 1 1 589D89BD
 P 5200 4800
 F 0 "SW1" H 5350 4910 50  0000 C CNN
@@ -619,7 +619,7 @@ Connection ~ 6900 3050
 Text Notes 7050 6800 0    60   ~ 0
 1. Facilitate connecton of encoder\n2. Consider serial port access (exposing PD0/PD1
 $Comp
-L C_Small C?
+L ThermocoupleLogger-rescue:C_Small- C?
 U 1 1 59161BEE
 P 5600 3500
 F 0 "C?" V 5371 3500 50  0000 C CNN
@@ -630,7 +630,7 @@ F 3 "" H 5600 3500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L C_Small C?
+L ThermocoupleLogger-rescue:C_Small- C?
 U 1 1 59161C96
 P 5600 3800
 F 0 "C?" V 5371 3800 50  0000 C CNN
@@ -648,7 +648,7 @@ Wire Wire Line
 	5800 3800 5700 3800
 Connection ~ 5800 3800
 $Comp
-L GND #PWR?
+L ThermocoupleLogger-rescue:GND- #PWR?
 U 1 1 591620E8
 P 5800 3950
 F 0 "#PWR?" H 5800 3700 50  0001 C CNN
