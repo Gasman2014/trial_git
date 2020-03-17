@@ -16,59 +16,59 @@ $EndDescr
 $Comp
 L ThermocoupleLogger-rescue:GND- #PWR010
 U 1 1 589D8979
-P 9000 5550
-F 0 "#PWR010" H 9000 5300 50  0001 C CNN
-F 1 "GND" H 9000 5400 50  0000 C CNN
-F 2 "" H 9000 5550 50  0000 C CNN
-F 3 "" H 9000 5550 50  0000 C CNN
-	1    9000 5550
+P 9000 5750
+F 0 "#PWR010" H 9000 5500 50  0001 C CNN
+F 1 "GND" H 9000 5600 50  0000 C CNN
+F 2 "" H 9000 5750 50  0000 C CNN
+F 3 "" H 9000 5750 50  0000 C CNN
+	1    9000 5750
 	1    0    0    -1  
 $EndComp
 $Comp
 L ThermocoupleLogger-rescue:Crystal- Y1
 U 1 1 589D897F
-P 10150 4700
-F 0 "Y1" H 10150 4850 50  0000 C CNN
-F 1 "Crystal" H 10150 4550 50  0000 C CNN
-F 2 "Crystals:Crystal_Round_Horizontal_3mm" H 10150 4700 50  0001 C CNN
-F 3 "" H 10150 4700 50  0000 C CNN
-	1    10150 4700
-	0    1    1    0   
+P 7850 5500
+F 0 "Y1" H 7850 5650 50  0000 C CNN
+F 1 "Crystal" H 7850 5350 50  0000 C CNN
+F 2 "Crystals:Crystal_Round_Horizontal_3mm" H 7850 5500 50  0001 C CNN
+F 3 "" H 7850 5500 50  0000 C CNN
+	1    7850 5500
+	0    -1   -1   0   
 $EndComp
 $Comp
 L ThermocoupleLogger-rescue:Battery-RESCUE-ThermocoupleLogger- BT1
 U 1 1 589D8986
-P 10150 5300
-F 0 "BT1" H 10250 5350 50  0000 L CNN
-F 1 "Battery" H 10250 5250 50  0000 L CNN
-F 2 "" V 10150 5340 50  0001 C CNN
-F 3 "" V 10150 5340 50  0000 C CNN
-	1    10150 5300
+P 10150 5600
+F 0 "BT1" H 10250 5650 50  0000 L CNN
+F 1 "Battery" H 10250 5550 50  0000 L CNN
+F 2 "" V 10150 5640 50  0001 C CNN
+F 3 "" V 10150 5640 50  0000 C CNN
+	1    10150 5600
 	1    0    0    -1  
 $EndComp
 $Comp
 L ThermocoupleLogger-rescue:GND- #PWR011
 U 1 1 589D898D
-P 10150 5500
-F 0 "#PWR011" H 10150 5250 50  0001 C CNN
-F 1 "GND" H 10150 5350 50  0000 C CNN
-F 2 "" H 10150 5500 50  0000 C CNN
-F 3 "" H 10150 5500 50  0000 C CNN
-	1    10150 5500
+P 10150 5800
+F 0 "#PWR011" H 10150 5550 50  0001 C CNN
+F 1 "GND" H 10150 5650 50  0000 C CNN
+F 2 "" H 10150 5800 50  0000 C CNN
+F 3 "" H 10150 5800 50  0000 C CNN
+	1    10150 5800
 	1    0    0    -1  
 $EndComp
 $Comp
 L ThermocoupleLogger-rescue:DS1307+- U3
 U 1 1 589D8996
-P 9000 4850
-F 0 "U3" H 8550 5450 50  0000 C CNN
-F 1 "DS1307+" H 9300 4300 50  0000 C CNN
-F 2 "" H 9000 4850 50  0001 C CNN
-F 3 "file:///Users/johnpateman/Dropbox/Components/Datasheets/DS1307.pdf" H 9000 4850 50  0001 C CNN
-F 4 "-" H 9000 4850 60  0001 C CNN "Manuf"
-F 5 "-" H 9000 4850 60  0001 C CNN "Part#"
-F 6 "-" H 9000 4850 60  0001 C CNN "Vendor"
-	1    9000 4850
+P 9000 5150
+F 0 "U3" H 8550 5750 50  0000 C CNN
+F 1 "DS1307+" H 9300 4600 50  0000 C CNN
+F 2 "" H 9000 5150 50  0001 C CNN
+F 3 "file:///Users/johnpateman/Dropbox/Components/Datasheets/DS1307.pdf" H 9000 5150 50  0001 C CNN
+F 4 "-" H 9000 5150 60  0001 C CNN "Manuf"
+F 5 "-" H 9000 5150 60  0001 C CNN "Part#"
+F 6 "-" H 9000 5150 60  0001 C CNN "Vendor"
+	1    9000 5150
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -260,7 +260,7 @@ Text GLabel 4250 4250 2    60   BiDi ~ 0
 SDA
 Text GLabel 4250 4350 2    60   BiDi ~ 0
 SCL
-Text GLabel 7750 5150 0    60   BiDi ~ 0
+Text GLabel 7750 5050 0    60   BiDi ~ 0
 SDA
 Text GLabel 7750 4850 0    60   BiDi ~ 0
 SCL
@@ -415,11 +415,9 @@ Wire Wire Line
 Wire Wire Line
 	2100 5300 1750 5300
 Wire Wire Line
-	9000 5450 9000 5550
+	10150 5750 10150 5800
 Wire Wire Line
-	10150 5450 10150 5500
-Wire Wire Line
-	9600 5150 10150 5150
+	9600 5450 10150 5450
 Wire Wire Line
 	4000 3300 4250 3300
 Wire Wire Line
@@ -443,8 +441,6 @@ Wire Wire Line
 	4000 3200 4300 3200
 Wire Wire Line
 	1950 3000 2100 3000
-Wire Wire Line
-	9000 4250 9000 4000
 Connection ~ 9000 4000
 Wire Wire Line
 	1750 5200 1750 5300
@@ -590,22 +586,19 @@ F 3 "" H 6900 2850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9600 4550 10150 4550
+	8400 5650 7850 5650
 Wire Wire Line
-	9600 4850 10150 4850
+	8400 5350 7850 5350
 Wire Wire Line
 	7750 4850 7950 4850
 Wire Wire Line
-	7750 5150 8200 5150
+	7750 5050 8200 5050
 Wire Wire Line
 	7950 4000 7950 4200
 Wire Wire Line
 	7950 4500 7950 4850
 Connection ~ 7950 4850
-Wire Wire Line
-	8200 4500 8200 5150
-Connection ~ 8200 5150
-NoConn ~ 8400 4550
+Connection ~ 8200 5050
 Wire Wire Line
 	6600 3050 6900 3050
 Wire Wire Line
@@ -691,7 +684,7 @@ Wire Wire Line
 Wire Wire Line
 	7950 4850 8400 4850
 Wire Wire Line
-	8200 5150 8400 5150
+	8200 5050 8400 5050
 Wire Wire Line
 	6900 2650 7200 2650
 Wire Wire Line
@@ -707,4 +700,10 @@ Wire Wire Line
 	7200 2650 7200 2750
 Wire Wire Line
 	7200 2950 7200 3050
+Wire Wire Line
+	8200 4500 8200 5050
+Wire Wire Line
+	9000 4000 9000 4550
+Wire Wire Line
+	8400 5550 8400 5650
 $EndSCHEMATC
