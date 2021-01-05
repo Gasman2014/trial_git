@@ -36,10 +36,10 @@ F 3 "" H 5600 2350 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ThermocoupleLogger-rescue:GND- #PWR01
+L ThermocoupleLogger-rescue:GND- #PWR?
 U 1 1 589C7DE5
 P 5600 2600
-F 0 "#PWR01" H 5600 2350 50  0001 C CNN
+F 0 "#PWR?" H 5600 2350 50  0001 C CNN
 F 1 "GND" H 5600 2450 50  0000 C CNN
 F 2 "" H 5600 2600 50  0000 C CNN
 F 3 "" H 5600 2600 50  0000 C CNN
@@ -47,10 +47,10 @@ F 3 "" H 5600 2600 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ThermocoupleLogger-rescue:GND- #PWR02
+L ThermocoupleLogger-rescue:GND- #PWR?
 U 1 1 589C7DEB
 P 5600 3850
-F 0 "#PWR02" H 5600 3600 50  0001 C CNN
+F 0 "#PWR?" H 5600 3600 50  0001 C CNN
 F 1 "GND" H 5600 3700 50  0000 C CNN
 F 2 "" H 5600 3850 50  0000 C CNN
 F 3 "" H 5600 3850 50  0000 C CNN
@@ -90,10 +90,10 @@ Connection ~ 6400 3350
 Text GLabel 5050 3350 0    60   Input ~ 0
 9V0
 $Comp
-L ThermocoupleLogger-rescue:GND- #PWR03
+L ThermocoupleLogger-rescue:GND- #PWR?
 U 1 1 589D9B90
 P 9450 3100
-F 0 "#PWR03" H 9450 2850 50  0001 C CNN
+F 0 "#PWR?" H 9450 2850 50  0001 C CNN
 F 1 "GND" H 9450 2950 50  0000 C CNN
 F 2 "" H 9450 3100 50  0000 C CNN
 F 3 "" H 9450 3100 50  0000 C CNN
@@ -101,10 +101,10 @@ F 3 "" H 9450 3100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ThermocoupleLogger-rescue:PWR_FLAG- #FLG04
+L ThermocoupleLogger-rescue:PWR_FLAG- #FLG?
 U 1 1 589D9BA2
 P 9450 3000
-F 0 "#FLG04" H 9450 3095 50  0001 C CNN
+F 0 "#FLG?" H 9450 3095 50  0001 C CNN
 F 1 "PWR_FLAG" H 9450 3180 50  0000 C CNN
 F 2 "" H 9450 3000 50  0000 C CNN
 F 3 "" H 9450 3000 50  0000 C CNN
@@ -124,10 +124,10 @@ Wire Notes Line
 Wire Wire Line
 	9450 3000 9450 3100
 $Comp
-L ThermocoupleLogger-rescue:PWR_FLAG- #FLG05
+L ThermocoupleLogger-rescue:PWR_FLAG- #FLG?
 U 1 1 589E3727
 P 9050 3000
-F 0 "#FLG05" H 9050 3095 50  0001 C CNN
+F 0 "#FLG?" H 9050 3095 50  0001 C CNN
 F 1 "PWR_FLAG" H 9050 3180 50  0000 C CNN
 F 2 "" H 9050 3000 50  0000 C CNN
 F 3 "" H 9050 3000 50  0000 C CNN

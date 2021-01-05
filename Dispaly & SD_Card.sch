@@ -31,10 +31,10 @@ F 3 "" H 3600 3750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ThermocoupleLogger-rescue:GND- #PWR07
+L ThermocoupleLogger-rescue:GND- #PWR?
 U 1 1 589D6D7F
 P 2900 4300
-F 0 "#PWR07" H 2900 4050 50  0001 C CNN
+F 0 "#PWR?" H 2900 4050 50  0001 C CNN
 F 1 "GND" H 2900 4150 50  0000 C CNN
 F 2 "" H 2900 4300 50  0000 C CNN
 F 3 "" H 2900 4300 50  0000 C CNN
@@ -52,10 +52,10 @@ Text GLabel 6750 3850 0    60   Input ~ 0
 Text GLabel 3150 2300 2    60   Input ~ 0
 B_LIGHT
 $Comp
-L ThermocoupleLogger-rescue:GND- #PWR08
+L ThermocoupleLogger-rescue:GND- #PWR?
 U 1 1 589E9EFA
 P 2200 1700
-F 0 "#PWR08" H 2200 1450 50  0001 C CNN
+F 0 "#PWR?" H 2200 1450 50  0001 C CNN
 F 1 "GND" H 2200 1550 50  0000 C CNN
 F 2 "" H 2200 1700 50  0000 C CNN
 F 3 "" H 2200 1700 50  0000 C CNN
@@ -127,10 +127,10 @@ Wire Wire Line
 Wire Wire Line
 	6300 3750 6300 5350
 $Comp
-L ThermocoupleLogger-rescue:GND- #PWR09
+L ThermocoupleLogger-rescue:GND- #PWR?
 U 1 1 589F89B1
 P 6300 5350
-F 0 "#PWR09" H 6300 5100 50  0001 C CNN
+F 0 "#PWR?" H 6300 5100 50  0001 C CNN
 F 1 "GND" H 6300 5200 50  0000 C CNN
 F 2 "" H 6300 5350 50  0000 C CNN
 F 3 "" H 6300 5350 50  0000 C CNN
